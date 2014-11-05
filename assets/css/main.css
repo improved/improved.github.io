@@ -273,7 +273,6 @@ bt {
 /* Program Modal CSS */
 
 
-
 .modal-body {
     text-align: left;
 }
@@ -289,13 +288,20 @@ bt {
 
  
 .modal li {
-    color: #0dd4d3;
+    color: #7b7b7b;
 	font-size: 15px;
 	margin-top: 0px;
 	margin-bottom: 0px;
     text-align: left;
     font-weight: bold;        
     
+}
+
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 900px;
+    margin: 30px auto;
+  }
 }
 
 /* Connect Form CSS */
@@ -482,6 +488,8 @@ textarea.form-control {
 .form-group {
   margin-bottom: 15px;
 }
+
+
 
 
 
