@@ -437,7 +437,7 @@ nav ul ul li a:hover {
   font-size: 30px;
   line-height: 1.5;
   color: #ccc;
-  vertical-align: middle;
+  vertical-align: center;
   background-color: transparent;
   background-image: none;
   border: 1px solid;
@@ -450,10 +450,6 @@ nav ul ul li a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 
-
-textarea.form-control {
-height: 350px ;
-}
 
 
 
