@@ -490,6 +490,12 @@ textarea.form-control {
 }
 
 
+#contactMessage {
+    border-bottom: 3px solid #0dd4d3;
+    box-shadow: blur-radius;
+}
+    
+
 
 
 
