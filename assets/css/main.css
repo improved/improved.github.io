@@ -436,11 +436,11 @@ nav ul ul li a:hover {
   padding: 0px 15px;
   font-size: 30px;
   line-height: 1.5;
-  color: #555555;
+  color: #ccc;
   vertical-align: middle;
   background-color: transparent;
   background-image: none;
-  border: 1px solid; 0dd4d3;
+  border: 1px solid;
   margin-bottom: 15px;
 }
 
