@@ -430,6 +430,10 @@ nav ul ul li a:hover {
 
 /* Connect Form */
 
+#Connectheader {
+    margin-top: 125px;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -451,6 +455,7 @@ nav ul ul li a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
 
 
 
