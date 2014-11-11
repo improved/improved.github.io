@@ -53,10 +53,10 @@
           <a class="navbar-brand" href="index.html">IMPROVED</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Discover.</a></li>
-            <li><a href="#">Learn.</a></li>
-            <li><a href="#">Connect.</a></li>   
+          <ul class="nav navbar-nav navbar-right" id="top-menu">
+            <li class="active"><a href="#foo">Discover.</a></li>
+            <li><a href="#bar">Learn.</a></li>
+            <li><a href="#baz">Connect.</a></li>   
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -98,7 +98,7 @@
 	<div class="container pt">
 		<div class="row mt centered">
             <div class="page-header" id="section-header">
-                    <h2>Discover.</h2>
+                    <h2 id="foo">Discover.</h2>
                     <p>Discover CTE programs in Providence Public High Schools</p>
             </div>
              
@@ -911,7 +911,7 @@ If you have a creative side and like working with others and computers, Visual A
       <div class="container" >
       <div class="col-lg-8 col-lg-offset-2 centered">   
         <div class="page-header" id="section-header">
-                    <h2>Learn.</h2>
+                    <h2 id="bar">Learn.</h2>
                     <p>Student produced instructional videos. (coming soon)</p>
                 <iframe src="//fast.wistia.net/embed/iframe/ewuyod26iw?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
             </div> 
@@ -924,7 +924,7 @@ If you have a creative side and like working with others and computers, Visual A
     <div class="container">
         <div class="row mt centered">
             <div class="page header" id="Connectheader">
-                <h2>Connect.</h2>
+                <h2 id="baz">Connect.</h2>
                     <p>Fill out the form below and we'll get back to you asap!</p> 
                 
                 <div class="col-lg-8 col-lg-offset-2">
@@ -1054,5 +1054,55 @@ If you have a creative side and like working with others and computers, Visual A
           })
       
       </script>
+                 
+      <!-- Scrollspy-->
+    <script>
+        // Cache selectors
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});      
+                 
+                 </script>
   </body>
 </html>
