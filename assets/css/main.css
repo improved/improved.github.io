@@ -110,6 +110,7 @@ a:after {
 
 .navbar-inverse {
 	background-color: #0dd4d3;
+    opacity: 50%;
 	border-color: #0bd0dd;
 }
 
@@ -478,6 +479,16 @@ html, body{height:100%; margin:0;padding:0}
 .centering {
   float:none;
   margin:0 auto;
+}
+
+/* Nav */
+
+.navbar-inverse {
+	
+background: rgba(13,212,211,.8);
+background: -webkit-linear-gradient(270deg, rgba(13,212,211,.8) 0%, rgba(13,212,211,.8) 100%);
+background: linear-gradient(-180deg, rgba(13,212,211,.8) 0%,rgba(13,212,211,.8) 100%);
+opacity: 1;
 }
 
 
