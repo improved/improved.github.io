@@ -492,5 +492,10 @@ opacity: 1;
 }
 
 
+/* Logo */
+.navbar .container .navbar-brand {
+margin-left: -30px;
+}
+
 
 
