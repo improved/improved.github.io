@@ -491,11 +491,15 @@ background: linear-gradient(-180deg, rgba(13,212,211,.8) 0%,rgba(13,212,211,.8) 
 opacity: 1;
 }
 
-
-/* Logo */
-.navbar .container .navbar-brand {
-margin-left: -30px;
+/* Nav active buttons */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #407882;
 }
+
+
 
 
 
