@@ -449,13 +449,15 @@ nav ul ul li a:hover {
   padding: 0px 15px;
   font-size: 30px;
   line-height: 1.5;
-  color: #ccc;
+  color: #909090;
   vertical-align: center;
   background-color: transparent;
   background-image: none;
   border: 1px solid;
   margin-bottom: 15px;
+
 }
+
 
 .form-control:focus {
   border-color: #0dd4d3;
